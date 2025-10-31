@@ -1,162 +1,125 @@
-🧩 Unix Duplicate File Finder
+# 🧩 Duplicate File Finder — Unix Edition
 
-Roll No: 241033038
-Project Title: Duplicate File Finder — Unix Edition
+## 👩‍💻 Author Details  
+**Roll No:** 241033028  
+**Course:** Unix Lab Project  
+**Submitted by:** Anahika Singh  
 
-🧾 Overview
+---
 
-The Duplicate File Finder is a Unix shell script designed to help users identify and manage duplicate files within a directory.
-It uses hashing algorithms (like md5sum) to detect duplicates efficiently, even if filenames differ.
+## 🛡️ Project Title  
+**Duplicate File Finder — Unix Edition**
 
-This project was created as part of a Unix Lab Assignment, focusing on file handling, loop control structures, and menu-driven scripting.
+---
 
-The tool provides an interactive terminal menu with options to scan directories, view duplicates, delete redundant files, and save reports for later reference.
+## 📖 Overview  
 
-🎯 Project Objectives
+The **Duplicate File Finder** is a **menu-driven shell script** developed as part of a Unix Lab project.  
+It helps users identify and manage **duplicate files** in a specified directory using Unix commands and scripting logic.
 
-Understand Unix file management and scripting fundamentals.
+The tool enhances file organization and saves disk space by scanning directories, listing duplicate files, and allowing deletion or report generation — all from a simple, color-coded terminal interface.
 
-Implement hashing techniques to detect duplicate files.
+---
 
-Develop a menu-driven shell script for easy interaction.
+## 🎯 Project Objectives  
 
-Provide users with options to scan, view, delete, and report duplicates.
+- To practice **Unix shell scripting** and file handling.  
+- To automate the process of finding **duplicate files** using hashing.  
+- To provide a **user-friendly, menu-driven interface**.  
+- To allow users to **save reports**, **view duplicates**, and **delete them** safely.  
+- To understand the use of commands like `find`, `md5sum`, and `awk`.
 
-Practice use of Unix utilities such as find, awk, md5sum, and sort.
+---
 
-⚙️ Key Functionalities
-1️⃣ Scan Directory for Duplicates
+## ⚙️ Key Functionalities  
 
-Prompts the user for a directory path.
+| Feature | Description |
+|----------|-------------|
+| 🔍 **Scan Directory** | Scans the given directory recursively for duplicate files based on file content (hash). |
+| 📋 **Show Duplicates** | Displays duplicate files in a formatted list. |
+| 🗑️ **Delete Duplicates** | Lets the user delete selected duplicate files to save disk space. |
+| 💾 **Save Report** | Saves a detailed duplicate file report in a text file. |
+| 🚪 **Exit** | Safely exits the program. |
 
-Uses find to recursively list all files.
+---
 
-Calculates a unique hash (MD5) for each file.
+## 🧠 Technologies Used  
 
-Detects duplicates by comparing hash values.
+- **Unix Shell Scripting (Bash)**  
+- **Commands Used:**  
+  `find`, `md5sum`, `awk`, `sort`, `uniq`, `rm`, `echo`, `read`  
+- **Text Formatting:** ANSI color codes for terminal output  
 
-Displays progress and saves results temporarily.
+---
 
-2️⃣ Show Duplicate Files
+## 🧩 Menu Interface Example  
 
-Displays a clean, formatted list of duplicate files detected in the last scan.
-
-Each group of duplicates is displayed together for easy reference.
-
-Shows both the original and duplicate paths.
-
-3️⃣ Delete Selected Duplicates
-
-Allows the user to choose whether to delete duplicates manually or automatically.
-
-Safely removes redundant files (keeping one copy of each unique file).
-
-Prevents accidental deletion by confirming before each removal.
-
-4️⃣ Save Report to File
-
-Saves all duplicate file details into a timestamped report:
-duplicate_report_YYYYMMDD_HHMM.txt
-
-The report includes:
-
-File paths
-
-Hash values
-
-Size comparisons
-
-Deletion summary
-
-5️⃣ Exit
-
-Exits gracefully with a thank-you message.
-
-Ensures all temporary files are deleted before closing.
-
-🧠 Technologies Used
-
-Shell Scripting (bash)
-
-Unix Utilities:
-
-find – recursive file search
-
-md5sum – checksum generation
-
-awk, sort, uniq – text processing
-
-rm, cat, read – file management and user input
-
-ANSI Color Codes – for colorized terminal UI
-
-Menu-driven logic – for user-friendly interface
-
-🧩 Menu-Driven Interface
 🧩 Duplicate File Finder — Unix Edition
 ────────────────────────────────────────
-1️⃣  Scan Directory for Duplicates
-2️⃣  Show Duplicate Files
-3️⃣  Delete Selected Duplicates
-4️⃣  Save Report to File
-5️⃣  Exit
+1️⃣ Scan Directory for Duplicates
+2️⃣ Show Duplicate Files
+3️⃣ Delete Selected Duplicates
+4️⃣ Save Report to File
+5️⃣ Exit
 ────────────────────────────────────────
 👉 Enter your choice (1–5):
 
+yaml
+Copy code
 
-Each option triggers a corresponding function that performs the desired operation interactively.
+---
 
-💡 Sample Workflow
+## 🧾 Code Structure  
 
-1️⃣ Run the script
+### 1️⃣ duplicate_finder.sh
+Main bash script that controls the full functionality.
 
-chmod +x duplicate_finder.sh
-./duplicate_finder.sh
+### 📂 Functions Implemented
+| Function | Purpose |
+|-----------|----------|
+| `scan_directory()` | Scans directory recursively and stores hash-based file details. |
+| `show_duplicates()` | Displays files with identical hashes. |
+| `delete_duplicates()` | Allows user to delete duplicate files safely. |
+| `save_report()` | Saves output to a report file with timestamp. |
 
+---
 
-2️⃣ Choose Option 1 → Scan directory
-Enter a directory path, e.g. /Users/anahikasingh/Documents
+## 🧪 Example Output
 
-3️⃣ Choose Option 2 → View detected duplicates
+Scanning directory...
+✅ Found 3 sets of duplicate files:
 
-4️⃣ Choose Option 3 → Delete unwanted copies
+file1.txt — /home/user/docs/
+file1_copy.txt — /home/user/backups/
 
-5️⃣ Choose Option 4 → Save the scan report
+image.png — /home/user/pics/
+image(1).png — /home/user/old_pics/
 
-📂 Sample Report (duplicate_report_2025-11-01_22:30.txt)
-🧩 Duplicate File Finder — Report
-Generated: 2025-11-01 22:30:54
+yaml
+Copy code
 
-Duplicate Group 1:
-MD5: 9a0364b9e99bb480dd25e1f0284c8555
-    ./photos/image1.png
-    ./backup/image1 (copy).png
+---
 
-Duplicate Group 2:
-MD5: e2fc714c4727ee9395f324cd2e7f331f
-    ./notes.txt
-    ./Documents/old_notes.txt
+## 🧰 Sample Commands Used
 
-Total Duplicates Found: 4
-Report saved successfully!
+```bash
+find "$directory" -type f -exec md5sum {} + | sort | awk 'BEGIN{lasthash=""} $1==lasthash{print $2} {lasthash=$1}'
+📦 Output File
+A report named like:
 
-🧾 Code Structure
-Function	Description
-scan_directory()	Finds and hashes all files
-show_duplicates()	Displays duplicate file groups
-delete_duplicates()	Removes selected duplicates
-save_report()	Exports duplicates to a text file
-main_menu()	Displays interactive options
-🧠 Enhancements (Future Scope)
+Copy code
+duplicate_report_2025-11-01.txt
+is automatically saved in the project folder when you choose “Save Report to File”.
 
-Add support for file comparison based on size and content (beyond hashing).
+💡 Future Enhancements
+Add an interactive confirmation before deletion.
 
-Implement multi-threaded hashing for large directories.
+Integrate logging for deleted files.
 
 Add PDF report generation using enscript and ps2pdf.
 
-Integrate email notification after scan completion.
+Implement color-coded duplicate groups.
 
-📜 License
-
-This project is licensed under the MIT License — free to use and modify with attribution.
+🧾 License
+This project is licensed under the MIT License.
+You are free to modify and distribute it with attribution.
