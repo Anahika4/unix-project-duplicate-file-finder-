@@ -64,8 +64,7 @@ The tool enhances file organization and saves disk space by scanning directories
 ────────────────────────────────────────
 👉 Enter your choice (1–5):
 
-yaml
-Copy code
+
 
 ---
 
@@ -95,8 +94,7 @@ file1_copy.txt — /home/user/backups/
 image.png — /home/user/pics/
 image(1).png — /home/user/old_pics/
 
-yaml
-Copy code
+
 
 ---
 
@@ -107,7 +105,7 @@ find "$directory" -type f -exec md5sum {} + | sort | awk 'BEGIN{lasthash=""} $1=
 📦 Output File
 A report named like:
 
-Copy code
+
 duplicate_report_2025-11-01.txt
 is automatically saved in the project folder when you choose “Save Report to File”.
 
@@ -123,3 +121,4 @@ Implement color-coded duplicate groups.
 🧾 License
 This project is licensed under the MIT License.
 You are free to modify and distribute it with attribution.
+
