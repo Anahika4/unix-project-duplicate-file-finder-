@@ -1,0 +1,55 @@
+🧩 Duplicate File Finder — Unix Edition
+----------------------------------------
+1) Scan Directory for Duplicates
+2) Show Duplicate Files
+3) Delete Duplicate Files
+4) Exit
+----------------------------------------
+Enter your choice (1–4): 1
+Enter directory path to scan: /Users/anahikasingh/Documents/test_duplicates
+🔍 Scanning for duplicates...
+✅ Scan complete! Duplicate report saved to dup.txt
+
+🔁 Press Enter to continue...
+
+🧩 Duplicate File Finder — Unix Edition
+----------------------------------------
+1) Scan Directory for Duplicates
+2) Show Duplicate Files
+3) Delete Duplicate Files
+4) Exit
+----------------------------------------
+Enter your choice (1–4): 2
+📋 Duplicate Files Found:
+/Users/anahikasingh/Documents/test_duplicates/copy_fileA.txt
+/Users/anahikasingh/Documents/test_duplicates/fileA.txt
+/Users/anahikasingh/Documents/test_duplicates/duplicate_fileB.txt
+/Users/anahikasingh/Documents/test_duplicates/fileB.txt
+/Users/anahikasingh/Documents/test_duplicates/dup.txt
+/Users/anahikasingh/Documents/test_duplicates/temp.txt
+
+🔁 Press Enter to continue...
+
+🧩 Duplicate File Finder — Unix Edition
+----------------------------------------
+1) Scan Directory for Duplicates
+2) Show Duplicate Files
+3) Delete Duplicate Files
+4) Exit
+----------------------------------------
+Enter your choice (1–4): 3
+🗑️ Deleting duplicate files...
+✅ Duplicates deleted.
+
+🔁 Press Enter to continue...
+
+🧩 Duplicate File Finder — Unix Edition
+----------------------------------------
+1) Scan Directory for Duplicates
+2) Show Duplicate Files
+3) Delete Duplicate Files
+4) Exit
+----------------------------------------
+Enter your choice (1–4): 4
+👋 Exiting Duplicate File Finder.
+anahikasingh@Anahikas-MacBook-Air test_duplicates % 
