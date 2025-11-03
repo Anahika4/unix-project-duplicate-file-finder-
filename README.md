@@ -73,18 +73,24 @@ Made script executable<br>
 `chmod +x duplicate_finder.sh`
 
 Created test folder with duplicate files<br>
-`mkdir ~/Documents/test_duplicates
+```
+mkdir ~/Documents/test_duplicates
+
 echo "This is file A" > ~/Documents/test_duplicates/fileA.txt
-cp ~/Documents/test_duplicates/fileA.txt ~/Documents/test_duplicates/copy_fileA.txt`
+
+cp ~/Documents/test_duplicates/fileA.txt ~/Documents/test_duplicates/copy_fileA.txt
+```
 
 Ran the script<br>
 `./duplicate_finder.sh`
 
 Saved and pushed project changes<br>
 ```
-git add .<br>
-git commit -m "Updated mac-compatible duplicate finder"<br>
-git push origin main<br>
+git add .
+
+git commit -m "Updated mac-compatible duplicate finder"
+
+git push origin main
 ```
 ---
 
