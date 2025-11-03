@@ -81,10 +81,10 @@ Ran the script<br>
 `./duplicate_finder.sh`
 
 Saved and pushed project changes<br>
-
-git add .<br>
+```git add .<br>
 git commit -m "Updated mac-compatible duplicate finder"<br>
 git push origin main<br>
+```
 ---
 
 ## 🧩 Menu Driven Interface  
