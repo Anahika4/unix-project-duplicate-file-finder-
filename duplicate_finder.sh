@@ -1,52 +1,49 @@
 #!/bin/bash
 
-while true; do
-clear
-echo "==========================================="
-echo "     Duplicate File Finder — Unix Edition"
-echo "==========================================="
-echo "1) Scan Directory for Duplicates"
-echo "2) Show Duplicate Files"
-echo "3) Delete Duplicate Files"
-echo "4) Exit"
-echo "-------------------------------------------"
-read -p "Enter your choice (1–4): " choice
+output_file="dup.txt"
 
-case $choice in
-1)
-    read -p "Enter directory path to scan: " dir
-    echo "🔍 Scanning for duplicates..."
-    find "$dir" -type f -exec md5sum {} + 2>/dev/null | sort | uniq -d -w32 | tee "$dir/dup.txt" >/dev/null
-    echo "✅ Scan complete! Duplicate report saved to $dir/dup.txt"
-    read -p "🔁 Press Enter to continue..."
-    ;;
-2)
-    read -p "Enter directory path to show report: " dir
-    if [ -f "$dir/dup.txt" ]; then
-        echo "📂 Duplicate Files Found:"
-        cat "$dir/dup.txt"
-    else
-        echo "⚠️ No dup.txt file found in $dir"
-    fi
-    read -p "🔁 Press Enter to continue..."
-    ;;
-3)
-    read -p "Enter directory path to delete duplicates from: " dir
-    if [ -f "$dir/dup.txt" ]; then
-        awk '{print $2}' "$dir/dup.txt" | xargs rm -f 2>/dev/null
-        echo "🗑️ All duplicate files deleted."
-    else
-        echo "⚠️ No dup.txt file found in $dir"
-    fi
-    read -p "🔁 Press Enter to continue..."
-    ;;
-4)
-    echo "👋 Exiting..."
-    exit 0
-    ;;
-*)
-    echo "Invalid choice. Try again."
-    read -p "Press Enter..."
-    ;;
-esac
+while true; do
+    clear
+    echo "Duplicate File Finder "
+    echo "------------------------------------"
+    echo "1) Scan Directory for Duplicates"
+    echo "2) Show Duplicate Files"
+    echo "3) Exit"
+    echo "------------------------------------"
+    read -p "Enter your choice (1-3): " choice
+
+    case $choice in
+        1)
+            read -p "Enter folder path to scan: " folder
+            echo "Scanning for duplicate files..."
+            tempfile=$(mktemp)
+            find "$folder" -type f -exec md5 {} \; | awk -F'= ' '{print $2 "  " $1}' | sort > "$tempfile"
+            awk '{
+                if ($1 == prev_hash) {
+                    print prev_file "\n" $2 "\n"
+                }
+                prev_hash=$1
+                prev_file=$2
+            }' "$tempfile" > "$output_file"
+            echo "Scan complete. Results saved to $output_file."
+            ;;
+        2)
+            if [ -s "$output_file" ]; then
+                echo "Duplicate Files Found:"
+                cat "$output_file"
+            else
+                echo "No duplicates found or scan not run yet."
+            fi
+            ;;
+        3)
+            echo "Exiting program."
+            break
+            ;;
+        *)
+            echo "Invalid choice. Please try again."
+            ;;
+    esac
+
+    echo ""
+    read -p "Press Enter to continue..."
 done

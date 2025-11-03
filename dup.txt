@@ -1,55 +1,39 @@
-🧩 Duplicate File Finder — Unix Edition
-----------------------------------------
+Duplicate File Finder 
+------------------------------------
 1) Scan Directory for Duplicates
 2) Show Duplicate Files
-3) Delete Duplicate Files
-4) Exit
-----------------------------------------
-Enter your choice (1–4): 1
-Enter directory path to scan: /Users/anahikasingh/Documents/test_duplicates
-🔍 Scanning for duplicates...
-✅ Scan complete! Duplicate report saved to dup.txt
+3) Exit
+------------------------------------
+Enter your choice (1-3): 1
+Enter folder path to scan: /Users/anahikasingh/Documents/test_duplicates
+Scanning for duplicate files...
+Scan complete. Results saved to dup.txt.
 
-🔁 Press Enter to continue...
+Press Enter to continue...
 
-🧩 Duplicate File Finder — Unix Edition
-----------------------------------------
+Duplicate File Finder 
+------------------------------------
 1) Scan Directory for Duplicates
 2) Show Duplicate Files
-3) Delete Duplicate Files
-4) Exit
-----------------------------------------
-Enter your choice (1–4): 2
-📋 Duplicate Files Found:
-/Users/anahikasingh/Documents/test_duplicates/copy_fileA.txt
-/Users/anahikasingh/Documents/test_duplicates/fileA.txt
-/Users/anahikasingh/Documents/test_duplicates/duplicate_fileB.txt
-/Users/anahikasingh/Documents/test_duplicates/fileB.txt
-/Users/anahikasingh/Documents/test_duplicates/dup.txt
-/Users/anahikasingh/Documents/test_duplicates/temp.txt
+3) Exit
+------------------------------------
+Enter your choice (1-3): 2
+Duplicate Files Found:
+MD5
+MD5
 
-🔁 Press Enter to continue...
+MD5
+MD5
 
-🧩 Duplicate File Finder — Unix Edition
-----------------------------------------
+Press Enter to continue...
+
+Duplicate File Finder 
+------------------------------------
 1) Scan Directory for Duplicates
 2) Show Duplicate Files
-3) Delete Duplicate Files
-4) Exit
-----------------------------------------
-Enter your choice (1–4): 3
-🗑️ Deleting duplicate files...
-✅ Duplicates deleted.
+3) Exit
+------------------------------------
+Enter your choice (1-3): 3
+Exiting program.
+anahikasingh@Anahikas-MacBook-Air unix-project-duplicate-file-finder- % 
 
-🔁 Press Enter to continue...
-
-🧩 Duplicate File Finder — Unix Edition
-----------------------------------------
-1) Scan Directory for Duplicates
-2) Show Duplicate Files
-3) Delete Duplicate Files
-4) Exit
-----------------------------------------
-Enter your choice (1–4): 4
-👋 Exiting Duplicate File Finder.
-anahikasingh@Anahikas-MacBook-Air test_duplicates % 
