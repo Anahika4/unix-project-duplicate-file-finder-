@@ -26,7 +26,7 @@ The tool enhances file organization and saves disk space by scanning directories
 - To practice **Unix shell scripting** and file handling.  
 - To automate the process of finding **duplicate files** using hashing.  
 - To provide a **user-friendly, menu-driven interface**.  
-- To allow users to **save reports**, **view duplicates**, and **delete them** safely.  
+- To allow users to **save reports** and **view duplicates**.  
 - To understand the use of commands like `find`, `md5sum`, and `awk`.
 
 ---
@@ -37,8 +37,6 @@ The tool enhances file organization and saves disk space by scanning directories
 |----------|-------------|
 | 🔍 **Scan Directory** | Scans the given directory recursively for duplicate files based on file content (hash). |
 | 📋 **Show Duplicates** | Displays duplicate files in a formatted list. |
-| 🗑️ **Delete Duplicates** | Lets the user delete selected duplicate files to save disk space. |
-| 💾 **Save Report** | Saves a detailed duplicate file report in a text file. |
 | 🚪 **Exit** | Safely exits the program. |
 
 ---
@@ -70,8 +68,6 @@ Main bash script that controls the full functionality.
 |-----------|----------|
 | `scan_directory()` | Scans directory recursively and stores hash-based file details. |
 | `show_duplicates()` | Displays files with identical hashes. |
-| `delete_duplicates()` | Allows user to delete duplicate files safely. |
-| `save_report()` | Saves output to a report file with timestamp. |
 
 ---
 
