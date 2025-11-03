@@ -82,9 +82,9 @@ Ran the script<br>
 
 Saved and pushed project changes<br>
 
-git add .
-git commit -m "Updated mac-compatible duplicate finder"
-git push origin main
+git add .<br>
+git commit -m "Updated mac-compatible duplicate finder"<br>
+git push origin main<br>
 ---
 
 ## 🧩 Menu Driven Interface  
