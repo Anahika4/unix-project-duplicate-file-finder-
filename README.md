@@ -53,6 +53,7 @@ The tool enhances file organization and saves disk space by scanning directories
 ---
 
 ## 🧩 Menu Driven Interface  
+<img width="586" height="118" alt="Screenshot 2025-11-03 at 12 20 52 PM" src="https://github.com/user-attachments/assets/2385d750-2b6a-46e2-a037-9d0152771799" />
 
 
 
@@ -76,15 +77,10 @@ Main bash script that controls the full functionality.
 
 ## 🧪 Example Output
 
-Scanning directory...
-✅ Found 3 sets of duplicate files:
+<img width="618" height="210" alt="Screenshot 2025-11-03 at 12 05 59 PM" src="https://github.com/user-attachments/assets/803d18ff-8d67-4bf1-b41a-1702e7388e6a" />
 
-file1.txt — /home/user/docs/
-file1_copy.txt — /home/user/backups/
-
-image.png — /home/user/pics/
-image(1).png — /home/user/old_pics/
-
+<img width="618" height="266" alt="Screenshot 2025-11-03 at 12 06 48 PM" src="https://github.com/user-attachments/assets/5695cf1c-4c04-41d7-96d9-b9d216118f45" />
+<img width="596" height="188" alt="Screenshot 2025-11-03 at 12 07 11 PM" src="https://github.com/user-attachments/assets/c7a54918-ea36-40cd-b77c-a5e71116dfb4" />
 
 
 ---
