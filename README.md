@@ -69,21 +69,22 @@ The tool enhances file organization and saves disk space by scanning directories
 
 ## 💻 Steps You Used to Make It Work on Mac
 
-Made script executable
+Made script executable<br>
 `chmod +x duplicate_finder.sh`
 
-Created test folder with duplicate files
+Created test folder with duplicate files<br>
 `mkdir ~/Documents/test_duplicates
 echo "This is file A" > ~/Documents/test_duplicates/fileA.txt
 cp ~/Documents/test_duplicates/fileA.txt ~/Documents/test_duplicates/copy_fileA.txt`
 
-Ran the script
+Ran the script<br>
 `./duplicate_finder.sh`
 
-Saved and pushed project changes
-`git add .
+Saved and pushed project changes<br>
+
+git add .
 git commit -m "Updated mac-compatible duplicate finder"
-git push origin main`
+git push origin main
 ---
 
 ## 🧩 Menu Driven Interface  
