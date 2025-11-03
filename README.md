@@ -43,50 +43,47 @@ The tool enhances file organization and saves disk space by scanning directories
 
 ## ⚙️ Commands Used in the Project (macOS Compatible)
 ## 🧩 Core Commands
-Command	Description	macOS Equivalent / Notes
-echo	Prints text or messages in the terminal	Used to display menu and messages
-read	Reads user input from the terminal	Used for folder path and menu selection
-find	Searches for files in a directory hierarchy	Used to scan folders for duplicate files
-md5	Calculates MD5 checksum for files	macOS version of md5sum
-sort	Sorts lines of text files	Used to prepare checksum data for comparison
-uniq -D	Prints duplicate lines	Used to detect duplicate files based on checksum
-cat	Displays content of a file	Used to show duplicate results
-mktemp	Creates a temporary file	Used to store scan data temporarily
-chmod +x duplicate_finder.sh	Makes the script executable	Required to run script in macOS terminal
-./duplicate_finder.sh	Runs the shell script	Used to execute the program
-git add .	Stages all modified files	Used for saving changes to Git
-git commit -m "message"	Commits changes to Git	Saves project progress
-git push origin main	Pushes local commits to GitHub	Uploads project updates
-🧠 macOS Compatibility Adjustments
-Linux Command	macOS Equivalent	Purpose
-md5sum	md5	To calculate checksums (used in duplicate scan)
-uniq -w	uniq -D	macOS does not support -w option
-bash scriptname.sh	./scriptname.sh (after chmod +x)	macOS allows execution if permission is set
-/proc paths	N/A	Not used — macOS does not have /proc
+| **Command**                    | **Description**                             | **macOS Equivalent / Notes**                     |
+| ------------------------------ | ------------------------------------------- | ------------------------------------------------ |
+| `echo`                         | Prints text or messages in the terminal     | Used to display menu and messages                |
+| `read`                         | Reads user input from the terminal          | Used for folder path and menu selection          |
+| `find`                         | Searches for files in a directory hierarchy | Used to scan folders for duplicate files         |
+| `md5`                          | Calculates MD5 checksum for files           | macOS version of `md5sum`                        |
+| `sort`                         | Sorts lines of text files                   | Used to prepare checksum data for comparison     |
+| `uniq -D`                      | Prints duplicate lines                      | Used to detect duplicate files based on checksum |
+| `cat`                          | Displays content of a file                  | Used to show duplicate results                   |
+| `mktemp`                       | Creates a temporary file                    | Used to store scan data temporarily              |
+| `chmod +x duplicate_finder.sh` | Makes the script executable                 | Required to run script in macOS terminal         |
+| `./duplicate_finder.sh`        | Runs the shell script                       | Used to execute the program                      |
+| `git add .`                    | Stages all modified files                   | Used for saving changes to Git                   |
+| `git commit -m "message"`      | Commits changes to Git                      | Saves project progress                           |
+| `git push origin main`         | Pushes local commits to GitHub              | Uploads project updates                          |
+
+## 🧠 macOS Compatibility Adjustments
+| **Linux Command**    | **macOS Equivalent**                 | **Purpose**                                     |
+| -------------------- | ------------------------------------ | ----------------------------------------------- |
+| `md5sum`             | `md5`                                | To calculate checksums (used in duplicate scan) |
+| `uniq -w`            | `uniq -D`                            | macOS does not support `-w` option              |
+| `bash scriptname.sh` | `./scriptname.sh` (after `chmod +x`) | macOS allows execution if permission is set     |
+| `/proc` paths        | N/A                                  | Not used — macOS does not have `/proc`          |
+
 ## 💻 Steps You Used to Make It Work on Mac
 
 Made script executable
-
-chmod +x duplicate_finder.sh
-
+`chmod +x duplicate_finder.sh`
 
 Created test folder with duplicate files
-
-mkdir ~/Documents/test_duplicates
+`mkdir ~/Documents/test_duplicates
 echo "This is file A" > ~/Documents/test_duplicates/fileA.txt
-cp ~/Documents/test_duplicates/fileA.txt ~/Documents/test_duplicates/copy_fileA.txt
-
+cp ~/Documents/test_duplicates/fileA.txt ~/Documents/test_duplicates/copy_fileA.txt`
 
 Ran the script
-
-./duplicate_finder.sh
-
+`./duplicate_finder.sh`
 
 Saved and pushed project changes
-
-git add .
+`git add .
 git commit -m "Updated mac-compatible duplicate finder"
-git push origin main
+git push origin main`
 ---
 
 ## 🧩 Menu Driven Interface  
