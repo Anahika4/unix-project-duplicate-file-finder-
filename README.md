@@ -55,7 +55,7 @@ The tool enhances file organization and saves disk space by scanning directories
 ## 🧩 Menu Driven Interface  
 
 
-<img width="319" height="148" alt="Screenshot 2025-11-01 at 9 33 33 PM" src="https://github.com/user-attachments/assets/38d6a24e-9a75-4624-8e3e-c6dc60f5c25e" />
+
 
 ---
 
