@@ -83,7 +83,6 @@ Main bash script that controls the full functionality.
 
 ## 🧰 Sample Commands Used
 
-```bash
 find "$directory" -type f -exec md5sum {} + | sort | awk 'BEGIN{lasthash=""} $1==lasthash{print $2} {lasthash=$1}'
 📦 Output File
 A report named like:
