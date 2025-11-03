@@ -92,7 +92,7 @@ A report named like:
 duplicate_report_2025-11-01.txt
 is automatically saved in the project folder when you choose “Save Report to File”.
 
-💡 Future Enhancements
+## 💡 Future Enhancements
 Add an interactive confirmation before deletion.
 
 Integrate logging for deleted files.
@@ -101,7 +101,7 @@ Add PDF report generation using enscript and ps2pdf.
 
 Implement color-coded duplicate groups.
 
-🧾 License
+## 🧾 License
 This project is licensed under the MIT License.
 You are free to modify and distribute it with attribution.
 
